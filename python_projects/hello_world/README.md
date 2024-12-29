@@ -30,5 +30,7 @@ Converts the specified object(s) into a string if not already a string, and prin
     - Specify to where Python should write the output.
     - The default is sys.stdout.
 - flush
-    - A Boolean specifying if the output is flushed (True) or buffered (False).
+    - A Boolean specifying if the output is to be flushed (True) or to be buffered (False).
+    - This is especially useful when a developer wants to guarantee a given piece of output is outputted regardless of the buffering stage, essentially manually force printing.
+      - Its use is not very common.
     - The default is False.
