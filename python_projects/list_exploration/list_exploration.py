@@ -87,7 +87,7 @@ print("After clear:", list)
 # The first number specifies the starting index, the second number the final index (not included), and the third the step.
 # Using negative integers will allow slicing to go from back to front (starting from -1), and no numbers does not slice.
 
-x = "Slice me"
+x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # 1. Simple slicing:
 print("Simple 0 - 5 slice:", x[0:5])
@@ -102,4 +102,17 @@ print("No end slice:", x[0::2])
 print("No start or end slice:", x[::2])
 
 # 4. Negative slicing:
-# TBC
+print("Negative slicing (last element):", x[-1:])
+print("Slicing the right part of the list (-5):", x[-5:])
+print("Negative slicing (middle):", x[-8:-3])
+print("Slicing the left part of the list (-5):", x[:-5])
+print("Reversing element order via slicing:", x[::-1]) # Start at the end of the list amd move one step until index zero.
+print("Reversing element order and alternating elements:", x[::-2])
+
+# 5. Using the slice() function.
+# NOTE! The slice() function expects one - three arguments. Pass None if nothing should go through.
+print("Simple function slice:", x[slice(0, 5)])
+print("Stepwise function slice:", x[slice(0, 5, 2)])
+print("No slicing function slice:", x[slice(None)])
+print("Middle slicing function slice:", x[slice(-8, -3)])
+print("Reversing element order via function slicing:", x[slice(None, None, -1)])
