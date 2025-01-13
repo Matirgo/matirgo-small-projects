@@ -1,4 +1,4 @@
-# The following programme investigates the different parameters that the print function can take.
+"""The following programme investigates the different parameters that the print function can take."""
 
 
 # ========== Object ==========
@@ -52,7 +52,7 @@ print()
 # The end parameter specifies what should come at the end of the objects in the print function.
 # The default of this is a new line ("\n").
 
-# 1. Inputting nothing as the end will replace the newline, so future print function outputs appear on the same line..
+# 1. Inputting nothing as the end will replace the newline, so future print function outputs appear on the same line.
 print("Hello, World!", end = "")
 print("Hello, World!")
 

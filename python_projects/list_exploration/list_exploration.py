@@ -1,7 +1,9 @@
 """A list is a data structure that holds multiple items of potentially different types.
 It can store multiple values in a single variable rather than in many variables."""
 
+
 # ========== Characteristics of a List ==========
+
 
 # 1. Unfixed size: List size is not determined upon creation and may be changed thereafter, unlike arrays.
 # 2. Different data types allowed: List elements may be of different types.
@@ -9,7 +11,9 @@ It can store multiple values in a single variable rather than in many variables.
 # 4. Ordered: Elements have a specified order that will not change.
 # 5. Duplicate values allowed: Lists may have duplicate elements.
 
+
 # ========== Simple List Invocations ==========
+
 
 # 1. Create a list: = []
 list1 = [1, 2]
@@ -22,7 +26,9 @@ list1[0] = 0
 list1[1] = 1
 print("After list update:", list1)
 
+
 # ========== Methods on Lists ==========
+
 
 # 1. Add object "e" to the end of the list "list": append
 list = []
@@ -77,7 +83,9 @@ print("After reverse:", list)
 list.clear()
 print("After clear:", list)
 
+
 # ========== Slicing Lists ==========
+
 
 # Resource: simplilearn, Everything You Need to Know About Python Slicing
 # Link: https://www.simplilearn.com/tutorials/python-tutorial/python-slicing
