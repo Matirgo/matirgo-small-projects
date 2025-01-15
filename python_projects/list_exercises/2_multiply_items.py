@@ -9,12 +9,12 @@ def multiply_list_basic(list_object):
     """A function that takes a list as input and multiplies all of its elements.
     The function assumes the list only contains numeric elements."""
     # Account for an empty list by initialising the total to zero if needed.
-    if i in list_object:
+    if len(list_object) > 0:
         total = 1
+        for i in list_object:
+            total *= i
     else:
         total = 0
-    for i in list_object:
-        total *= i
     return total
 
 # Advanced function that checks element types and simplifies the calculations.
@@ -24,7 +24,13 @@ def multiply_list(list_object):
     # Check element types.
     if not all(isinstance(i, (int, float)) for i in list_object):
         raise TypeError("All elements in the list must be integers or floats.")
-    return(list_object)
+    if len(list_object) > 0:
+        total = 1
+        for i in list_object:
+            total *= i
+    else:
+        total = 0
+    return total
 
 # ========== Test Cases ==========
 
