@@ -17,27 +17,27 @@ def find_largest_item_basic(list_object):
 # Largest item function using the max() method.
 def find_largest_item(list_object):
     """A function that takes a list as input and finds the largest of its elemetns using the max() method.
-    The function checks if there is at least one element in the list, and if not, raises a value error.
-    The function checks if the elements are numeric, and if not, raises a type error."""
+    The function checks if the elements are numeric, and if not, raises a type error.
+    The function checks if there is at least one element in the list, and if not, raises a value error."""
     # Check element types.
-    if len(list_object) < 1:
-        raise ValueError("List must contain at least one element.")
     if not all(isinstance(i, (int, float)) for i in list_object):
         raise TypeError("All elements in the list must be integers of floats.")
+    elif len(list_object) < 1:
+        raise ValueError("List must contain at least one element.")
     return max(list_object)
 
 # Combining error handling logic without the max method.
 def find_largest_item_advanced(list_object):
     """A function that takes a list as input and finds the largest of its elemetns without using the max() method.
-    The function checks if there is at least one element in the list, and if not, raises a value error.
-    The function checks if the elements are numeric, and if not, raises a type error."""
+    The function checks if the elements are numeric, and if not, raises a type error.
+    The function checks if there is at least one element in the list, and if not, raises a value error."""
     # Check element types.
-    if len(list_object) < 1:
+    if not all(isinstance(i, (int, float)) for i in list_object):
+        raise TypeError("All elements in the list must be integers of floats.")
+    elif len(list_object) < 1:
         raise ValueError("List must contain at least one element.")
     elif len(list_object) == 1: # If there is only one element in the list, then that is the largest element.
         return list_object[0]
-    if not all(isinstance(i, (int, float)) for i in list_object):
-        raise TypeError("All elements in the list must be integers of floats.")
     largest_item = list_object[0]
     for i in list_object[1:]: # Since index zero has already been applied, there is no need to compare it to itself.
         if largest_item < i:
