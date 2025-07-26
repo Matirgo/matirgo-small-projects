@@ -7,7 +7,9 @@
 # Basic function that assumes input is already correct.
 def multiply_list_basic(list_object):
     """A function that takes a list as input and multiplies all of its elements.
-    The function assumes the list only contains numeric elements."""
+    The function assumes the list only contains numeric elements.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     # Account for an empty list by initialising the total to zero if needed.
     if len(list_object) > 0:
         total = 1
@@ -20,7 +22,9 @@ def multiply_list_basic(list_object):
 # Advanced function that checks element types and simplifies the calculations.
 def multiply_list(list_object):
     """A function that takes a list as input and multiplies all of its elements.
-    The function checks if the elements are numeric, and if not, raises an error."""
+    The function checks if the elements are numeric, and if not, raises an error.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     # Check element types.
     if not all(isinstance(i, (int, float)) for i in list_object):
         raise TypeError("All elements in the list must be integers or floats.")

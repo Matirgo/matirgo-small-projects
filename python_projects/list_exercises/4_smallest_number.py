@@ -7,7 +7,9 @@
 # Basic function calculating the smallest item in the lst.
 def find_smallest_item_basic(list_object):
     """A function that takes a list as input and finds the smallest of its elemetns.
-    The function assumes the list only contains numeric elements and is at least two elements long."""
+    The function assumes the list only contains numeric elements and is at least two elements long.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     smallest_item = list_object[0] # Assign smallest_item to the first element in the list.
     for i in list_object: # Iterate through all the elements in the list.
         if smallest_item > i: # If the current element is smaller than the smallest element, assign a new smallest element.
@@ -18,7 +20,9 @@ def find_smallest_item_basic(list_object):
 def find_smallest_item(list_object):
     """A function that takes a list as input and finds the smallest of its elemetns using the min() method.
     The function checks if the elements are numeric, and if not, raises a type error.
-    The function checks if there is at least one element in the list, and if not, raises a value error."""
+    The function checks if there is at least one element in the list, and if not, raises a value error.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     # Check element types.
     if not all(isinstance(i, (int, float)) for i in list_object):
         raise TypeError("All elements in the list must be integers of floats.")
@@ -30,7 +34,9 @@ def find_smallest_item(list_object):
 def find_smallest_item_advanced(list_object):
     """A function that takes a list as input and finds the smallest of its elemetns without using the min() method.
     The function checks if the elements are numeric, and if not, raises a type error.
-    The function checks if there is at least one element in the list, and if not, raises a value error."""
+    The function checks if there is at least one element in the list, and if not, raises a value error.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     # Check element types.
     if not all(isinstance(i, (int, float)) for i in list_object):
         raise TypeError("All elements in the list must be integers of floats.")

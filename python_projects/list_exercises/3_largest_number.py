@@ -7,7 +7,9 @@
 # Basic function calculating the largest item in the lst.
 def find_largest_item_basic(list_object):
     """A function that takes a list as input and finds the largest of its elemetns.
-    The function assumes the list only contains numeric elements and is at least two elements long."""
+    The function assumes the list only contains numeric elements and is at least two elements long.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     largest_item = list_object[0] # Assign largest_item to the first element in the list.
     for i in list_object: # Iterate through all the elements in the list.
         if largest_item < i: # If the current element is larger than the largest element, assign a new largest element.
@@ -18,7 +20,9 @@ def find_largest_item_basic(list_object):
 def find_largest_item(list_object):
     """A function that takes a list as input and finds the largest of its elemetns using the max() method.
     The function checks if the elements are numeric, and if not, raises a type error.
-    The function checks if there is at least one element in the list, and if not, raises a value error."""
+    The function checks if there is at least one element in the list, and if not, raises a value error.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     # Check element types.
     if not all(isinstance(i, (int, float)) for i in list_object):
         raise TypeError("All elements in the list must be integers of floats.")
@@ -30,7 +34,9 @@ def find_largest_item(list_object):
 def find_largest_item_advanced(list_object):
     """A function that takes a list as input and finds the largest of its elemetns without using the max() method.
     The function checks if the elements are numeric, and if not, raises a type error.
-    The function checks if there is at least one element in the list, and if not, raises a value error."""
+    The function checks if there is at least one element in the list, and if not, raises a value error.
+    Time Complexity: O(n).
+    Space Complexity: O(1)."""
     # Check element types.
     if not all(isinstance(i, (int, float)) for i in list_object):
         raise TypeError("All elements in the list must be integers of floats.")
